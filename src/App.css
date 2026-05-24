@@ -1,171 +1,206 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-.container {
-  max-width: 400px;
-  margin: 50px auto; 
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.2); 
-  background-size: cover;
-  backdrop-filter: blur(10px); 
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  color: white;
-  background-position: center;
-  transition: background-image 0.8s ease-in-out; 
- 
-}
-
-.container.Haze {
-  background-image: url('https://images.unsplash.com/photo-1454105511235-eda89ad84214?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9nZ3klMjBmb3Jlc3R8ZW58MHx8MHx8fDA%3D');
-}
-
-.container.Rain {
-  background-image: url('https://img.freepik.com/free-photo/weather-effects-collage-concept_23-2150062064.jpg?semt=ais_hybrid&w=740&q=80');
-}
-
-.container.Clear {
-  background-image: url('https://static.vecteezy.com/system/resources/previews/029/575/615/non_2x/fluffy-clouds-clear-sky-at-daytime-bright-weather-weather-nature-abstract-background-leave-space-for-text-free-photo.jpg');
-}
-
-.container.Clouds {
-  background-image: url('https://t4.ftcdn.net/jpg/05/13/26/73/360_F_513267391_QEmNGeOFLLqrILTnoq21dReUPp5UsoNr.jpg');
-}
-
-.container.Snow {
-  background-image: url('https://media.gettyimages.com/id/1451886516/video/discovering-majestic-mountain-valley-surrounded-with-snow-covered-forest.jpg?s=640x640&k=20&c=_QD0oJ-R9ZiRItFYum8LsM2KCnl0cIkOoCUVUGFV6_o=');
-}
-
-.input {
-  padding: 12px 20px;
-  width: 70%; 
-  background: rgba(255, 255, 255, 0.1); 
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 30px; 
-  font-size: 16px;
-  color: white;
-  outline: none; 
-  transition: all 0.3s ease; 
-  margin-right: 10px;
-}
-
-
-.input:focus {
-  background: rgba(255, 255, 255, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-  width: 75%; 
-}
-.input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.search {
-  background-color: none;
-  width: 45px;        
-  height: 45px;        
-  border: none;
-  border-radius: 50%;  
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;          
- vertical-align: middle;
-  transition: transform 0.2s ease;
-  overflow: hidden;    
-}
-.search img {
-  width: 22px;        
-  height: 22px;
-  object-fit: contain; 
-}
-
-.search:hover {
-  background-color: #0056b3;
-  transform: scale(1.1);
-}
-.print {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  background: none; 
-}
-
-.print h3:nth-of-type(1) {
-  font-size: 1.5rem;
-  font-weight: 300;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.8);
-  margin: 0;
-}
-
-.print h3:nth-of-type(2) {
-  font-size: 50rem;
-  font-weight: 400;
-  margin: -10px 0;
-  color: #ffffff;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 
-               0 0 40px rgba(255, 255, 255, 0.2);
-}
-
-.print p {
-  font-size: 5rem;
-  font-weight: 500;
-  letter-spacing: 2px;
-  color: #00d2ff;
-  text-transform: capitalize;
-  background: rgba(0, 210, 255, 0.1);
-  padding: 5px 20px;
-  border-radius: 40px;
-  border: 1px solid rgba(0, 210, 255, 0.3);
-}
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', sans-serif;
   background-image: url('https://images.pexels.com/photos/3075993/pexels-photo-3075993.jpeg'); 
-   background-size: cover;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; 
-  background-color: #2c3e50; 
-  
   height: 100vh;
   width: 100%;
-}
-
-.details-grid {
   display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
-.detail-item p {
-  font-size: 0.75rem;
+.weather-wrapper {
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
+}
+
+.weather-wrapper h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 5px;
-  opacity: 0.7;
+  margin-bottom: 30px;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  padding: 40px 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(15px) saturate(150%);
+  -webkit-backdrop-filter: blur(15px) saturate(150%);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+/* Overlay for readability */
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%);
+  z-index: 0;
+}
+
+.container > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Dynamic backgrounds with overlay */
+.container.Haze, .container.Mist, .container.Smoke, .container.Fog {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1454105511235-eda89ad84214?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9nZ3klMjBmb3Jlc3R8ZW58MHx8MHx8fDA%3D');
+}
+
+.container.Rain, .container.Drizzle {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://img.freepik.com/free-photo/weather-effects-collage-concept_23-2150062064.jpg?semt=ais_hybrid&w=740&q=80');
+}
+
+.container.Clear {
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://static.vecteezy.com/system/resources/previews/029/575/615/non_2x/fluffy-clouds-clear-sky-at-daytime-bright-weather-weather-nature-abstract-background-leave-space-for-text-free-photo.jpg');
+}
+
+.container.Clouds {
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://t4.ftcdn.net/jpg/05/13/26/73/360_F_513267391_QEmNGeOFLLqrILTnoq21dReUPp5UsoNr.jpg');
+}
+
+.container.Snow {
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://media.gettyimages.com/id/1451886516/video/discovering-majestic-mountain-valley-surrounded-with-snow-covered-forest.jpg?s=640x640&k=20&c=_QD0oJ-R9ZiRItFYum8LsM2KCnl0cIkOoCUVUGFV6_o=');
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 5px 5px 5px 20px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 40px;
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus-within {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+  font-family: inherit;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-btn {
+  background: white;
+  color: #333;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+.search-btn:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.weather-info {
+  text-align: center;
+}
+
+.city {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin: 0;
   letter-spacing: 1px;
 }
 
-.detail-item span {
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-h1 {
-  color: white;
-  font-family: 'Poppins', sans-serif; /* Modern font */
-  font-size: 2.5rem;
+.temp {
+  font-size: 5rem;
   font-weight: 600;
-  text-align: center;
-  letter-spacing: 3px;
+  margin: 10px 0;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.condition {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  background: rgba(255, 255, 255, 0.15);
+  display: inline-block;
+  padding: 5px 20px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 30px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  font-size: 0.7rem;
   text-transform: uppercase;
-  margin-top: 20px;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Makes it pop */
+  opacity: 0.7;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.value {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 400px) {
+  .temp {
+    font-size: 4rem;
+  }
+  .details-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }
